@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width', initial-scale='1'>
+		<title>폐브리즈</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/codingBooster.css">
+		<link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/3304/3304432.svg">
+	</head>
+	<body>
+		<style type="text/css">
+			.jumbotron {
+				background-image: url('images/jjumbo.jpg');
+				background-size: cover;
+				text-shadow: black 0.2em 0.2em 0.2em;
+				color: white;
+			} 
+		</style>
+		<nav class='navbar navbar-default'>
+			<div class="container-fluid">
+				<div class='navbar-header'>
+					<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+						<span class='sr-only'></span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+					</button>
+					<a class='navbar-brand' href="index.html">폐브리즈</a>
+				</div>
+				<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+					<ul class='nav navbar-nav'>
+						<li class='active'><a href="index.html">소개<span class='sr-only'></span></a></li>
+						<li><a href="member.html">운영진</a></li>
+						<li class='dropdown'>
+							<a href="#" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expand='false'>결과<span class='caret'></span></a>
+							<ul class='dropdown-menu'>
+								<li><a href="result.html?resultname=COVID-19">COVID-19</a></li>
+								<li><a href="result.html?resultname=normal">normal</a></li>
+								<li><a href="result.html?resultname=pneumonia">pneumonia</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class='navbar-form navbar-left'>
+						<div class='form-group'>
+							<input type="text" class='form-control' placeholder="내용을 입력하세요.">
+						</div>
+						<button type='submit' class='btn btn-default'>검색</button>
+					</form>
+					<ul class='nav navbar-nav navbar-right'>
+						<li class='dropdown'>
+							<a href="#" class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expand='false'>접속하기<span class='caret'></span></a>
+							<ul class='dropdown-menu'>
+								<li><a href="loginForm.html">로그인</a></li>
+								<li><a href="registerForm.html">회원가입</a></li>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class='container'>
+			<div class='jumbotron'>
+				<h1 class='text-center'>COVID-19 classifier를 소개합니다.</h1>
+				<p class='text-center'>COVID-19 classifier는 코로나 분류기입니다. 빠른 결과확인이 가능합니다.</p>
+				<p class='text-center'><a class="btn btn-primary bin-lg" href="classifier.html" role='button'>결과 확인하러가기</a></p>
+			</div>
+			<div class='row'>
+				<div class='col-md-4'>
+					<h4>COVID19 분류기의 특징</h4>
+					<p>폐브리즈는 COVID19분류 프로그램입니다. 폐브리즈는 다른 사이트와 차원이 다른 깔끔한 분류를 제공합니다!</p>
+					<p><a class='btn btn-default' data-target='#modal' data-toggle='modal'>자세히 알아보기</a></p>
+				</div>
+				<div class='col-md-4'>
+					<h4>선별진료소 찾기</h4>
+					<p>폐브리즈는 현재 계신곳에서 가장가까운 선별진료소의 위치를 제공합니다! 아래 버튼을 눌러 빠르게 알아보세요!</p>
+					<p><a class='btn btn-default' href='screening.html'>자세히 알아보기</a></p>
+				</div>
+				<div class='col-md-4'>
+					<h4>여러 모델의 결과를 비교해 보세요!</h4>
+					<p>폐브리즈에서 진행한 Resnet Densnet InceptionResnet의 결과를 비교해 볼 수 있습니다. loss와 accuracy를 비교해보세요!</p>
+					<p><a class='btn btn-default' href='model.html'>자세히 알아보기</a></p>
+				</div>
+			</div>
+			<hr>
+			<div class='panel panel-primary'>
+				<div class='panel-heading'>
+					<h3 class='panel-title'><span class='glyphicon glyphicon-pencil'></span>
+					&nbsp;&nbsp; COVID-19 결과 목록 </h3>
+				</div>
+				<div class='panel-body'>
+					<div class='media'>
+						<div class='media-left'>
+							<a href="#"><img class='media-object' src="images/covid.jpg" alt='COVID-19 X-ray 사진'></a>
+						</div>
+						<div class='media-body'>
+							<h4 class='media-heading'><a href="result.html?resultname=COVID-19">COVID-19 양성 결과</a>&nbsp;<span class='badge'>New</span></h4>
+							코로나 감염 시 공통적인 증상은 발열, 마른기침, 피로감 입니다. 드물지만 몸살, 인후통, 설사, 결막염, 두통, 미각 또는 후각 상실이 나타날 수 있습니다. 심각한 증상으로는 호흡곤란, 숨 가쁨, 가슴통증, 압박감이 나타날 수도 있습니다. 심각한 증상이 있다면 즉시 의료진의 도움을 받으세요. 
+						</div>
+					</div>
+					<hr>
+					<div class='media'>
+						<div class='media-left'>
+							<a href="#"><img class='media-object' src="images/NORMAL.jpg" alt='NORMAL X-ray 사진'></a>
+						</div>
+						<div class='media-body'>
+							<h4 class='media-heading'><a href="result.html?resultname=normal">정상 결과</a>&nbsp;<span class='badge'>New</span></h4>
+							항상 마스크를 착용하고 감염 확산 방지에 동참해 주세요. 마스크를 착용하세요. 손을 자주 씻으세요. 거리두기를 생활화 하세요.  
+						</div>
+					</div>
+					<hr>
+					<div class='media'>
+						<div class='media-left'>
+							<a href="#"><img class='media-object' src="images/pnumonia.jpg" alt='pnumonia X-ray 사진'></a>
+						</div>
+						<div class='media-body'>
+							<h4 class='media-heading'><a href="result.html?resultname=pneumonia">폐렴 양성 결과</a>&nbsp;<span class='badge'>New</span></h4>
+							폐렴의 경우 일반적으로 발열과 함께 누렇고 냄새나는 가래, 기침, 호흡곤란이 발생합니다. 노인의 경우 식욕이 없거나 기운이 없는등의 증상이 나타나기 때문에 더욱 세심한 관찰이 필요합니다. 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer style="background-color: #000000; color: #ffffff">
+			<div class='container'>
+				<br>
+				<div class="row">
+					<div class='col-sm-2' style="'text-align: center;"><h5>copyright &copy; 2020</h5><h5>김주연(Kim juyeon)</h5></div>
+					<div class='col-sm-4'><h4>막내 소개</h4><p>저는 폐브리즈의 막내 김주연 입니다. 인공지능 사관학교에서 공부중입니다. CXR을 이용하여 COVID 환자를 구분하는 프로그램을 제작중에 있습니다.</p></div>
+					<div class = 'col-sm-2'><h4 style='text-align:center;'>네비게이션</h4>
+						<div class='list-group'>
+							<a href="index.html" class='list-group-item'>소개</a>
+							<a href="member.html" class='list-group-item'>운영진</a>
+							<a href="result.html" class='list-group-item'>result</a>
+						</div>
+					</div>
+					<div class='col-sm-2'><h4 style="text-align: center;">SNS</h4>
+						<div class='list-group'>
+							<a href="https://www.facebook.com/" class='list-group-item'>페이스북</a>
+							<a href="https://www.youtube.com/" class='list-group-item'>유튜브</a>
+							<a href="https://tv.naver.com/" class='list-group-item'>네이버 TV</a>
+						</div>
+					</div>
+					<div class='col-sm-2'><h4 style="text-align: center;"><span class='glyphicon glyphicon-ok'></span>&nbspby 폐브리즈</h4></div>	
+				</div>
+		</footer>
+		<div class='row'>
+			<div class='modal' id='modal' tabindex="-1">
+				<div class='modal-dialog'>
+					<div class='modal-content'>
+						<div class='modal-header'>
+							COVID-19의 특징
+							<button class="close" data-dismiss='modal'>&times;</button>
+						</div>
+						<div class='modal-body' style='text-align: center;'>
+							저희 서비스의 특징은 바로 빠른 코로나 양성여부 판단 입니다! <br>
+							특히 다양한 모델에 따른 결과가 연동되어 제공됩니다. <br><br>
+							<img src="images/비교.jpg" id='imagepreview' style='width: 256px; height:256px;'>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src='http://code.jquery.com/jquery-3.1.1.min.js'></script>
+		<script src='js/bootstrap.js'></script>
+	</body>
+</html>
